@@ -7,12 +7,54 @@
     <link rel="stylesheet" href="./CSS/style.css">
 <body>
     <div class="container">
-        <div id="name"></div>
-        <div id="contacts"></div>
-        <div id="about"></div>
-        <div id="skills"></div>
-        <div id="workHistory"></div>
-        <div id="education"></div>
+        <section class="profile">
+            <header class="name">
+                <a>
+                    <h1 id="name"></h1>
+                </a>
+            </header>
+            <header class="connect">
+                <span id="mail-id">✉<a id="email"></a></span>
+                <span id="phone-number">📱<a id="phone"></a></span>
+                <span id="linkedin"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><rect width="100%" height="100%" fill="white" /> <title>LinkedIn</title><g><path d="m 20.4 1.5 v 17.4 a 1.5 1.5 90 0 1 -1.5 1.5 h -17.4 a 1.5 1.5 90 0 1 -1.5 -1.5 v -17.4 a 1.5 1.5 90 0 1 1.5 -1.5 h 17.4 a 1.5 1.5 90 0 1 1.5 1.5 z m -14.4 6.3 h -3 v 9.6 h 3 z m 0.27 -3.3 a 1.728 1.728 90 0 0 -1.716 -1.74 h -0.054 a 1.74 1.74 90 0 0 0 3.48 h 0 a 1.728 1.728 90 0 0 1.77 -1.686 z m 11.13 7.068 c 0 -2.886 -1.836 -4.008 -3.66 -4.008 a 3.42 3.42 90 0 0 -3.036 1.548 h -0.084 v -1.308 h -2.82 v 9.6 h 3 v -5.106 a 1.992 1.992 90 0 1 1.8 -2.148 h 0.114 c 0.954 0 1.662 0.6 1.662 2.112 v 5.142 h 3 z" fill="#0a66c2"></path></g></svg> <a id="linkedin-link"></a></span>
+            </header>
+        </section>
+        <section class="prof-summary">
+            <header>
+                <h2>Professional Summary</h2>
+            </header>
+            <div id="about"></div>
+        </section>
+        <section class="skills">
+            <header>
+                <h2>Skills</h2>
+            </header>
+            <div id="skills"></div>
+        </section>
+        <section class="work-history">
+            <header>
+                <h2>Work History</h2>
+            </header>
+            <div id="work-history"></div>
+        </section>
+        <section class="education">
+            <header>
+                <h2>Education</h2>
+            </header>
+            <div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Course</th>
+                            <th>Institution</th>
+                            <th>Date</th>
+                            <th>Marks</th>
+                        </tr>
+                    </thead>
+                    <tbody id="education"></tbody>
+                </table>
+            </div>
+        </section>
     </div>
     <script src="./Script/staticFunction.js"></script>
     <script src="./Script/data.js"></script>

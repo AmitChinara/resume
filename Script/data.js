@@ -4,15 +4,16 @@ let yearsOfExperience = calculateYearsOfExperience(start_date_data);
 const contact_name_data = `AMIT CHINARA`;
 
 const contact_details_data = {
+    email: `amitchinara@gmail.com`,
     resume: `https://amitchinara.github.io/resume/`,
-    linkedin: `www.linkedin.com/in/amit-chinara-0403b5312a`,
-    leetcode: `www.leetcode.com/u/amitchinara`,
+    linkedin: `https://www.linkedin.com/in/amit-chinara-0403b5312/`,
+    leetcode: `leetcode.com/u/amitchinara`,
     number: `+91 8093386767`,
 };
 
 const about_data = `I have <time datetime="${start_date_data}"><b>${yearsOfExperience}</b></time> years of work experience and my communication skills are robust enough to help me develop good relationship with other this also helps me to communicate my ideas to others. I am a team player which makes the work go smoothly. Along with this my creative problem-solving skills give me advantages during challenging situations. I believe that establishing defined objectives and meeting deadlines promotes a systematic and results-oriented approach to work. My ability to guide the team toward a certain goal demonstrates my leadership potential, making me an asset in any workplace.`;
 
-const skills_data= [`Java8`, `Oracle DB`, `MongoDB`, `HTML`, `CSS`, `JavaScript`, `TypeScript`, `Spring Boot`, `Maven`, `JUnit`, `Node JS`, `Jest`, `Python`, `Linux Script`];
+const skills_data= [`Java8`, `Oracle DB`, `MongoDB`, `HTML`, `CSS`, `JavaScript`, `TypeScript`, `Maven`, `JUnit`, `Node JS`, `Jest`, `Python`, `Linux Script`];
 
 const work_experience_data = [
     {
@@ -76,21 +77,21 @@ const work_experience_data = [
 
 const education_experience_data= [
     {
-        duration: `2018-2022`,
+        duration: `<time datetime="2018-2022">2018-2022</time>`,
         name: `B. TECH (COMPUTER SCIENCE ENGINEERING)`,
-        institution: `ITER`,
+        institution: `Institute Of Technical Education and Research`,
         location: `BBSR, ODISHA`,
         score: `8.36 CGPA`
     },
     {
-        duration: `2016-2018`,
+        duration: `<time datetime="2016-2018">2016-2018</time>`,
         name: `12TH STANDARD`,
         institution: `DAV PUBLIC SCHOOL, UNIT 8`,
         location: `BBSR, ODISHA`,
         score: `57.00%`
     },
     {
-        duration: `2016`,
+        duration: `<time datetime="2016">2016</time>`,
         name: `10TH STANDARD`,
         institution: `DAV PUBLIC SCHOOL, UNIT 8`,
         location: `BBSR, ODISHA`,

@@ -1,6 +1,66 @@
+a {
+    text-decoration: none;
+    color: black;
+}
+
+body h2 {
+    text-decoration: underline;
+}
+
 .container {
     /*border: 2px solid red;*/
     height: fit-content;
     width: 1052px;
     margin: auto;
+}
+
+.profile {
+    /*border: 2px solid red;*/
+    width: fit-content;
+    margin: auto;
+    font-family: monospace;
+    font-size: 24px;
+}
+
+#name {
+    text-align: center;
+}
+
+.connect {
+    font-size: large;
+}
+
+section.skills ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+section.skills ul li {
+    background-color: #e0e0e0;
+    border-radius: 16px;
+    padding: 8px 16px;
+    margin: 5px;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.work:not(:last-child) {
+    border-bottom: 1px solid hsla(0, 0%, 0%, 0.11);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+td, th {
+    text-align: center;
+    border: 1px solid;
+    padding-inline: 0.21rem;
+}
+
+th {
+    font-weight: bold;
 }
