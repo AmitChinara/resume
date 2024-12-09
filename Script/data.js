@@ -1,22 +1,24 @@
-import { contact_obj, company_obj, education_obj } from '../interfaces/interface';
+const start_date_data = "2022-09";
+let yearsOfExperience = calculateYearsOfExperience(start_date_data);
 
-const contact_name: string = `AMIT CHINARA`;
+const contact_name_data = `AMIT CHINARA`;
 
-const contact_details: contact_obj = {
+const contact_details_data = {
+    resume: `https://amitchinara.github.io/resume/`,
     linkedin: `www.linkedin.com/in/amit-chinara-0403b5312a`,
     leetcode: `www.leetcode.com/u/amitchinara`,
     number: `+91 8093386767`,
 };
 
-const about: string = `I have 2+ years of work experience and my communication skills are robust enough to help me develop good relationship with other this also helps me to communicate my ideas to others. I am a team player which makes the work go smoothly. Along with this my creative problem-solving skills give me advantages during challenging situations. I believe that establishing defined objectives and meeting deadlines promotes a systematic and results-oriented approach to work. My ability to guide the team toward a certain goal demonstrates my leadership potential, making me an asset in any workplace.`;
+const about_data = `I have <time datetime="${start_date_data}"><b>${yearsOfExperience}</b></time> years of work experience and my communication skills are robust enough to help me develop good relationship with other this also helps me to communicate my ideas to others. I am a team player which makes the work go smoothly. Along with this my creative problem-solving skills give me advantages during challenging situations. I believe that establishing defined objectives and meeting deadlines promotes a systematic and results-oriented approach to work. My ability to guide the team toward a certain goal demonstrates my leadership potential, making me an asset in any workplace.`;
 
-const skills: string[] = [`Java8`, `Oracle DB`, `MongoDB`, `HTML`, `CSS`, `JavaScript`, `TypeScript`, `Spring Boot`, `Maven`, `JUnit`, `Node JS`, `Jest`, `Python`, `Linux Script`];
+const skills_data= [`Java8`, `Oracle DB`, `MongoDB`, `HTML`, `CSS`, `JavaScript`, `TypeScript`, `Spring Boot`, `Maven`, `JUnit`, `Node JS`, `Jest`, `Python`, `Linux Script`];
 
-const work_experience: company_obj[] = [
+const work_experience_data = [
     {
         company_name: `Accenture in India`,
         designation: `Application Development Analyst`,
-        duration: `2022-Sept to Present`,
+        duration: `<time datetime="2022-Sept">2022-Sept</time> to <time datetime="Present">Present</time>`,
         location: `Bengaluru, Karnataka, India`,
         role: [
             {
@@ -72,7 +74,7 @@ const work_experience: company_obj[] = [
     }
 ];
 
-const education_experience: education_obj[] = [
+const education_experience_data= [
     {
         duration: `2018-2022`,
         name: `B. TECH (COMPUTER SCIENCE ENGINEERING)`,
@@ -95,3 +97,12 @@ const education_experience: education_obj[] = [
         score: `7.4 CGPA`
     }
 ];
+
+const data = {
+    contact_name: contact_name_data,
+    contact_details: contact_details_data,
+    about: about_data,
+    skills: skills_data,
+    work_experience: work_experience_data,
+    education_experience: education_experience_data
+}
