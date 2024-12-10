@@ -12,6 +12,7 @@ body h2 {
     height: fit-content;
     width: 1052px;
     margin: auto;
+    padding-bottom: 20px;
 }
 
 .profile {
