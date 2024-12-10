@@ -7,7 +7,7 @@ const contact_details_data = {
     email: `amitchinara@gmail.com`,
     resume: `https://amitchinara.github.io/resume/`,
     linkedin: `https://www.linkedin.com/in/amit-chinara-0403b5312/`,
-    leetcode: `leetcode.com/u/amitchinara`,
+    leetcode: `https://leetcode.com/u/amitchinara/`,
     number: `+91 8093386767`,
 };
 

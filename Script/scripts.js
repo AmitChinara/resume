@@ -7,6 +7,7 @@ const nameElement = document.getElementById(`name`);
 const emailElement = document.getElementById(`email`);
 const phoneElement = document.getElementById(`phone`);
 const linkedinElement = document.getElementById(`linkedin-link`);
+const leetcodeElement = document.getElementById(`leetcode-link`);
 
 const aboutElement = document.getElementById(`about`);
 const skillsElement = document.getElementById(`skills`);
@@ -23,6 +24,8 @@ phoneElement.setAttribute("href", `tel:${data.contact_details.number}`);
 phoneElement.innerHTML = data.contact_details.number;
 linkedinElement.setAttribute("href", data.contact_details.linkedin);
 linkedinElement.innerHTML = data.contact_details.linkedin;
+leetcodeElement.setAttribute("href", data.contact_details.leetcode);
+leetcodeElement.innerHTML = data.contact_details.leetcode;
 
 transformed_data = `<ul>`
 for (const skill of data.skills) {
