@@ -23,9 +23,9 @@ emailElement.innerHTML = data.contact_details.email;
 phoneElement.setAttribute("href", `tel:${data.contact_details.number}`);
 phoneElement.innerHTML = data.contact_details.number;
 linkedinElement.setAttribute("href", data.contact_details.linkedin);
-linkedinElement.innerHTML = data.contact_details.linkedin;
+linkedinElement.innerHTML = data.contact_details.linkedin.replaceAll(`https://www.linkedin.com/in`, ``);
 leetcodeElement.setAttribute("href", data.contact_details.leetcode);
-leetcodeElement.innerHTML = data.contact_details.leetcode;
+leetcodeElement.innerHTML = data.contact_details.leetcode.replaceAll(`https://leetcode.com/u`, ``);;
 
 transformed_data = `<ul>`
 for (const skill of data.skills) {
