@@ -1,4 +1,4 @@
-const start_date_data = "2021-06";
+const start_date_data = "2021-12";
 let yearsOfExperience = calculateYearsOfExperience(start_date_data);
 
 const contact_name_data = `AMIT CHINARA`;
@@ -84,14 +84,19 @@ const work_experience_data = [
     {
         company_name: `Highradius`,
         designation: `Intern`,
-        duration: `<time datetime="2021-Jun">2021-Jun</time> to <time datetime="2022-Aug">2022-Aug</time>`,
+        duration: `<time datetime="2021-Dec">2021-Dec</time> to <time datetime="2022-Aug">2022-Aug</time>`,
         location: `Remote`,
          role: [
              {
-                 name: `FrontEnd Development`,
+                 name: `Frontend Developer`,
                  points: [
-                     `Develop interactive and responsive dashboards to display key business metrics.`,
-                     `Create components like gauges, histograms, and time series charts.`
+                     {
+                         name: `Frontend Development`,
+                         points: [
+                             `Develop interactive and responsive dashboards to display key business metrics.`,
+                             `Create components like gauges, histograms, and time series charts.`
+                         ]
+                     }
                 ]
              }
          ]

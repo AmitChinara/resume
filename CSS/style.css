@@ -70,3 +70,8 @@ td, th {
 th {
     font-weight: bold;
 }
+
+h4, h3 {
+    margin-top: 1px;
+    margin-bottom: 1px;
+}
