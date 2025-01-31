@@ -80,6 +80,22 @@ const work_experience_data = [
                 ]
             }
         ]
+    },
+    {
+        company_name: `Highradius`,
+        designation: `Intern`,
+        duration: `<time datetime="2021-Jun">2021-Jun</time> to <time datetime="2022-Aug">2022-Aug</time>`,
+        location: `Bengaluru, Karnataka, India`,
+         role: [
+             {
+                 name: `FrontEnd Development`,
+                 points: [
+                     `Develop interactive and responsive dashboards to display key business metrics.`,
+                     `Create components like gauges, histograms, and time series charts.`,
+                     ``
+                ]
+             }
+         ]
     }
 ];
 
