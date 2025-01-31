@@ -23,7 +23,7 @@ const work_experience_data = [
         location: `Bengaluru, Karnataka, India`,
         role: [
             {
-                name: `Backend Developer`,
+                name: `FullStack Developer`,
                 points: [
                     {
                         name: `REST API Middleware Development`,
@@ -39,6 +39,14 @@ const work_experience_data = [
                         points: [
                             `Built a custom log aggregation and processing tool using Bash scripting, enhancing observability of service performance.`,
                             `Enabled the team to easily debug latency issues, reducing troubleshooting time and pinpointing root causes more effectively.`
+                        ]
+                    },
+                    {
+                        name: `FrontEnd Development`,
+                        points: [
+                            `Designed and developed dynamic web components using React.js (v18.0.1), enhancing user interface interactivity and responsiveness.`,
+                            `Built a visually appealing UI to showcase the product catalog for a telecom-based client, optimizing user experience.`,
+                            `Created a Call-to-Action (CTA) form for customer inquiries, improving engagement and lead generation.`
                         ]
                     },
                     {
