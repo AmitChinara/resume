@@ -111,20 +111,20 @@ const education_experience_data= [
         location: `BBSR, ODISHA`,
         score: `8.36 CGPA`
     },
-    {
-        duration: `<time datetime="2016-2018">2016-2018</time>`,
-        name: `12TH STANDARD`,
-        institution: `DAV PUBLIC SCHOOL, UNIT 8`,
-        location: `BBSR, ODISHA`,
-        score: `57.00%`
-    },
-    {
-        duration: `<time datetime="2016">2016</time>`,
-        name: `10TH STANDARD`,
-        institution: `DAV PUBLIC SCHOOL, UNIT 8`,
-        location: `BBSR, ODISHA`,
-        score: `7.4 CGPA`
-    }
+    // {
+    //     duration: `<time datetime="2016-2018">2016-2018</time>`,
+    //     name: `12TH STANDARD`,
+    //     institution: `DAV PUBLIC SCHOOL, UNIT 8`,
+    //     location: `BBSR, ODISHA`,
+    //     score: `57.00%`
+    // },
+    // {
+    //     duration: `<time datetime="2016">2016</time>`,
+    //     name: `10TH STANDARD`,
+    //     institution: `DAV PUBLIC SCHOOL, UNIT 8`,
+    //     location: `BBSR, ODISHA`,
+    //     score: `7.4 CGPA`
+    // }
 ];
 
 const data = {
