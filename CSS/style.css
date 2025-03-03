@@ -1,78 +1,132 @@
-a {
-    /*border: 2px solid red;*/
-    text-decoration: none;
-    color: black;
-}
-
+/* General Styles */
 body {
-    text-align: justify;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
 }
 
-body h2 {
+/* Header */
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header a {
+    color: #f4f4f4;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header a:hover {
     text-decoration: underline;
 }
 
-.container {
-    /*border: 2px solid red;*/
-    height: fit-content;
-    width: 1052px;
-    margin: auto;
-    padding-bottom: 50px;
+/* Sections */
+section {
+    width: 80%;
+    margin: 20px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.profile {
-    /*border: 2px solid red;*/
-    width: fit-content;
-    margin: auto;
-    font-family: monospace;
-    font-size: 20px;
+/* About Me */
+#about {
+    text-align: justify;
 }
 
-#name {
-    text-align: center;
-    font-size: 40px;
-}
-
-.connect {
-    /*font-size: large;*/
-}
-
-section.skills ul {
-    list-style-type: none;
+/* Skills List */
+#skills-list {
+    list-style: none;
     padding: 0;
     display: flex;
     flex-wrap: wrap;
+    gap: 10px;
 }
 
-section.skills ul li {
-    background-color: #e0e0e0;
-    border-radius: 16px;
-    padding: 8px 16px;
-    margin: 5px;
-    display: inline-block;
-    /*font-size: 16px;*/
+#skills-list li {
+    background: #007bff;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 15px;
+    font-weight: bold;
 }
 
-.work:not(:last-child) {
-    border-bottom: 1px solid hsla(0, 0%, 0%, 0.11);
+/* Work Experience */
+.work {
+    margin-bottom: 20px;
+    padding: 15px;
+    border-left: 4px solid #007bff;
+    background: #f9f9f9;
+    border-radius: 5px;
 }
 
+.work header {
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.project h3 {
+    color: #007bff;
+    margin-top: 10px;
+}
+
+.project h4 {
+    color: #333;
+    margin-top: 5px;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.project ul {
+    padding-left: 20px;
+}
+
+.project li {
+    margin-bottom: 5px;
+}
+
+/* Education Table */
 table {
     width: 100%;
     border-collapse: collapse;
+    margin-top: 10px;
 }
 
-td, th {
-    text-align: center;
-    border: 1px solid;
-    padding-inline: 0.21rem;
+thead {
+    background-color: #007bff;
+    color: white;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
 }
 
 th {
     font-weight: bold;
 }
 
-h4, h3 {
-    margin-top: 1px;
-    margin-bottom: 1px;
+tr:hover {
+    background-color: #ddd;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #333;
+    color: white;
+    margin-top: 20px;
 }

@@ -2,56 +2,55 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Amit Chinara Resume</title>
-    <meta name="viewport" content="width=1024, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amit Chinara - Resume</title>
+    <link rel="stylesheet" href="./CSS/style.css">
+    <script defer src="./Script/staticFunction.js"></script>
+    <script defer src="./Script/data.js"></script>
+    <script defer src="./Script/scripts.js"></script>
 </head>
-    <link rel="stylesheet" href="./CSS/style.css?v=1.0">
 <body>
-    <div class="container">
-        <section class="profile">
-            <a>
-                <h1 id="name"></h1>
-            </a>
-            <span id="mail-id">✉<a id="email"></a></span>
-            <span id="phone-number">📱<a id="phone"></a></span>
-            <span id="linkedin"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><rect width="100%" height="100%" fill="white" /> <title>LinkedIn</title><g><path d="m 20.4 1.5 v 17.4 a 1.5 1.5 90 0 1 -1.5 1.5 h -17.4 a 1.5 1.5 90 0 1 -1.5 -1.5 v -17.4 a 1.5 1.5 90 0 1 1.5 -1.5 h 17.4 a 1.5 1.5 90 0 1 1.5 1.5 z m -14.4 6.3 h -3 v 9.6 h 3 z m 0.27 -3.3 a 1.728 1.728 90 0 0 -1.716 -1.74 h -0.054 a 1.74 1.74 90 0 0 0 3.48 h 0 a 1.728 1.728 90 0 0 1.77 -1.686 z m 11.13 7.068 c 0 -2.886 -1.836 -4.008 -3.66 -4.008 a 3.42 3.42 90 0 0 -3.036 1.548 h -0.084 v -1.308 h -2.82 v 9.6 h 3 v -5.106 a 1.992 1.992 90 0 1 1.8 -2.148 h 0.114 c 0.954 0 1.662 0.6 1.662 2.112 v 5.142 h 3 z" fill="#0a66c2"></path></g></svg> <a id="linkedin-link"></a></span>
-            <span id="leetcode"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" id="leetcode">
-  <path fill="#B3B1B0" d="M22 14.355c0-.742-.564-1.346-1.26-1.346H10.676c-.696 0-1.26.604-1.26 1.346s.563 1.346 1.26 1.346H20.74c.696.001 1.26-.603 1.26-1.346z"></path>
-  <path fill="#E7A41F" d="m3.482 18.187 4.313 4.361c.973.979 2.318 1.452 3.803 1.452 1.485 0 2.83-.512 3.805-1.494l2.588-2.637c.51-.514.492-1.365-.039-1.9-.531-.535-1.375-.553-1.884-.039l-2.676 2.607c-.462.467-1.102.662-1.809.662s-1.346-.195-1.81-.662l-4.298-4.363c-.463-.467-.696-1.15-.696-1.863 0-.713.233-1.357.696-1.824l4.285-4.38c.463-.467 1.116-.645 1.822-.645s1.346.195 1.809.662l2.676 2.606c.51.515 1.354.497 1.885-.038.531-.536.549-1.387.039-1.901l-2.588-2.636a4.994 4.994 0 0 0-2.392-1.33l-.034-.007 2.447-2.503c.512-.514.494-1.366-.037-1.901-.531-.535-1.376-.552-1.887-.038l-10.018 10.1C2.509 11.458 2 12.813 2 14.311c0 1.498.509 2.896 1.482 3.876z"></path>
-  <path fill="#070706" d="M8.115 22.814a2.109 2.109 0 0 1-.474-.361c-1.327-1.333-2.66-2.66-3.984-3.997-1.989-2.008-2.302-4.937-.786-7.32a6 6 0 0 1 .839-1.004L13.333.489c.625-.626 1.498-.652 2.079-.067.56.563.527 1.455-.078 2.066-.769.776-1.539 1.55-2.309 2.325-.041.122-.14.2-.225.287-.863.876-1.75 1.729-2.601 2.618-.111.116-.262.186-.372.305-1.423 1.423-2.863 2.83-4.266 4.272-1.135 1.167-1.097 2.938.068 4.127 1.308 1.336 2.639 2.65 3.961 3.974.067.067.136.132.204.198.468.303.474 1.25.183 1.671-.321.465-.74.75-1.333.728-.199-.006-.363-.086-.529-.179z"></path>
-</svg><a id="leetcode-link"></a></span>
-        </section>
-        <section class="prof-summary">
-            <h2>Professional Summary</h2>
-            <div id="about"></div>
-        </section>
-        <section class="skills">
-            <h2>Skills</h2>
-            <div id="skills"></div>
-        </section>
-        <section class="work-history">
-            <h2>Work History</h2>
-            <div id="work-history"></div>
-        </section>
-        <section class="education">
-            <h2>Education</h2>
-            <div>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Course</th>
-                            <th>Institution</th>
-                            <th>Date</th>
-                            <th>Marks</th>
-                        </tr>
-                    </thead>
-                    <tbody id="education"></tbody>
-                </table>
-            </div>
-        </section>
-    </div>
-    <script src="./Script/staticFunction.js?v=1.0"></script>
-    <script src="./Script/data.js?v=1.0"></script>
-    <script src="./Script/scripts.js?v=1.0"></script>
+<header>
+    <h1 id="contact-name"></h1>
+    <p>Email: <a id="email" href="#"></a> | Phone: <a id="phone" href="#"></a></p>
+    <p>
+        <a id="linkedin-link" href="#" target="_blank">LinkedIn</a> |
+        <a id="leetcode-link" href="#" target="_blank">LeetCode</a>
+    </p>
+</header>
+
+<section id="about">
+    <h2>About Me</h2>
+    <p id="about-text"></p>
+</section>
+
+<section id="skills">
+    <h2>Skills</h2>
+    <ul id="skills-list"></ul>
+</section>
+
+<section id="experience">
+    <h2>Work Experience</h2>
+    <div id="work-history"></div>
+</section>
+
+<section id="education">
+    <h2>Education</h2>
+    <table>
+        <thead>
+        <tr>
+            <th>Course</th>
+            <th>Institution</th>
+            <th>Duration</th>
+            <th>Score</th>
+        </tr>
+        </thead>
+        <tbody id="education-list"></tbody>
+    </table>
+</section>
+
+<footer>
+    <p>&copy; 2024 Amit Chinara | All rights reserved.</p>
+</footer>
 </body>
 </html>
