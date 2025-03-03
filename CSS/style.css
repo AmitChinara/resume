@@ -163,24 +163,4 @@ footer {
     .noprint {
         display: none !important;
     }
-
-    .container {
-        display: flex !important;
-        flex-direction: row !important; /* Ensure left and right sections stay side by side */
-        justify-content: space-between;
-    }
-
-    .left-column {
-        width: 35% !important; /* Adjust as needed */
-        text-align: left;
-    }
-
-    .right-column {
-        width: 60% !important; /* Adjust as needed */
-        text-align: left;
-    }
-
-    section {
-        page-break-inside: avoid; /* Prevent sections from splitting across pages */
-    }
 }
