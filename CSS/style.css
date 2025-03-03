@@ -5,14 +5,18 @@ body {
     padding: 0;
     background-color: #f4f4f4;
     color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* Header */
 header {
     background-color: #333;
     color: white;
-    padding: 1px;
+    padding: 10px;
     text-align: center;
+    width: 100%; /* Ensures full width */
 }
 
 header a {
@@ -25,14 +29,35 @@ header a:hover {
     text-decoration: underline;
 }
 
-/* Sections */
-section {
+/* Main Layout - Two Column Design */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
     width: 80%;
     margin: 10px auto;
+    gap: 20px;
+}
+
+/* Left Section - Contact & Skills */
+.left-section {
+    flex: 1;
+    min-width: 280px;
+}
+
+/* Right Section - Other Content */
+.right-section {
+    flex: 2;
+    min-width: 400px;
+}
+
+/* Sections */
+section {
     background: white;
     padding: 10px;
     border-radius: 8px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
 }
 
 /* About Me */
@@ -87,11 +112,17 @@ section {
     margin-bottom: 5px;
 }
 
-/* Education Table */
+/* Education Table - Responsive Fix */
+.education-container {
+    overflow-x: auto;
+    width: 100%;
+}
+
 table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 10px;
+    min-width: 600px; /* Ensures readability on small screens */
 }
 
 thead {
@@ -124,11 +155,32 @@ footer {
     background: #333;
     color: white;
     margin-top: 20px;
+    width: 97vw;
 }
 
+/* Print View */
 @media print {
     .noprint {
         display: none !important;
     }
-}
 
+    .container {
+        display: flex !important;
+        flex-direction: row !important; /* Ensure left and right sections stay side by side */
+        justify-content: space-between;
+    }
+
+    .left-column {
+        width: 35% !important; /* Adjust as needed */
+        text-align: left;
+    }
+
+    .right-column {
+        width: 60% !important; /* Adjust as needed */
+        text-align: left;
+    }
+
+    section {
+        page-break-inside: avoid; /* Prevent sections from splitting across pages */
+    }
+}

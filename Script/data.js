@@ -1,137 +1,55 @@
 const start_date_data = "2021-12";
-let yearsOfExperience = calculateYearsOfExperience(start_date_data);
-
-const contact_name_data = `AMIT CHINARA`;
-
-const contact_details_data = {
-    email: `amitchinara@gmail.com`,
-    resume: `https://amitchinara.github.io/resume/`,
-    linkedin: `https://www.linkedin.com/in/amit-chinara-0403b5312/`,
-    leetcode: `https://leetcode.com/u/amitchinara/`,
-    number: `+91 8093386767`,
-};
-
-const about_data = `Highly skilled and self-motivated Software Engineer with <time datetime="${start_date_data}"><b>${yearsOfExperience}</b></time> years of experience in designing, developing, and optimizing scalable applications. Passionate about solving complex problems with clean, efficient, and maintainable code. Adept at working in agile environments, collaborating with cross-functional teams, and delivering high-quality software at great velocity.`;
-
-const skills_data = new Set([`Java`, `Spring Boot`, `Oracle DB`, `MongoDB`, `HTML`, `CSS`, `JavaScript`, `TypeScript`, `React JS`, `Maven`, `JUnit`, `Node JS`, `Jest`, `Python`, `Linux Script`, `Git`, `Docker`]);
-
-const work_experience_data = [
-    {
-        company_name: `Accenture in India`,
-        designation: `Application Development Analyst`,
-        duration: `<time datetime="2022-Sept">2022-Sept</time> to <time datetime="Present">Present</time>`,
-        location: `Bengaluru, Karnataka, India`,
-        role: [
-            {
-                name: `Software Engineer - Fullstack`,
-                points: [
-                    {
-                        name: `REST API Middleware Development`,
-                        points: [
-                            `Designed and implemented REST API middleware for a leading telecom company using Java and Spring Boot, delivering scalable and efficient solutions.`,
-                            `Optimized API performance by crafting and fine-tuning complex SQL queries, significantly reducing response times.`,
-                            `Followed best coding practices and ensured code quality through static analysis tools like SonarQube and comprehensive testing with JUnit.`,
-                            `Delivered high-quality, bug-free code, meeting strict deadlines and adhering to industry standards.`
-                        ]
-                    },
-                    {
-                        name: `Service Observability & Debugging`,
-                        points: [
-                            `Built a custom log aggregation and processing tool using Bash scripting, enhancing observability of service performance.`,
-                            `Enabled the team to easily debug latency issues, reducing troubleshooting time and pinpointing root causes more effectively.`
-                        ]
-                    },
-                    {
-                        name: `FrontEnd Development`,
-                        points: [
-                            `Designed and developed dynamic web components using React.js (v18.0.1), enhancing user interface interactivity and responsiveness.`,
-                            `Built a visually appealing UI to showcase the product catalog for a telecom-based client, optimizing user experience.`,
-                            `Created a Call-to-Action (CTA) form for customer inquiries, improving engagement and lead generation.`
-                        ]
-                    },
-                    {
-                        name: `Migration from MuleSoft to Node.js`,
-                        points: [
-                            `Led the migration of APIs from MuleSoft to Node.js, leveraging TypeScript to deliver robust and maintainable code.`,
-                            `Ensured end-to-end delivery, including the setup of database interactions, error handling, and security.`,
-                            `Utilized Jest for comprehensive testing to maintain high code reliability.`
-                        ]
-                    },
-                    {
-                        name: `Performance Optimization`,
-                        points: [
-                            `Spearheaded initiatives to optimize API execution times, achieving significant reductions through SQL query optimizations and efficient backend design.`
-                        ]
-                    },
-                    {
-                        name: `Team Collaboration & Mentorship`,
-                        points: [
-                            `Actively contributed to team discussions on architectural decisions and performance improvements.`,
-                            `Shared insights on debugging techniques and best practices, fostering a collaborative and high-performing team environment.`
-                        ]
-                    },
-                    {
-                        name: `Key Achievements`,
-                        points: [
-                            `Successfully delivered high-impact backend solutions, solving challenging problems with innovative and intuitive approaches.`,
-                            `Demonstrated ownership and expertise in handling diverse tasks ranging from API design to performance monitoring and optimization.`
-                        ]
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        company_name: `Highradius`,
-        designation: `Intern`,
-        duration: `<time datetime="2021-Dec">2021-Dec</time> to <time datetime="2022-Aug">2022-Aug</time>`,
-        location: `Remote`,
-         role: [
-             {
-                 name: `Software Engineer - Frontend`,
-                 points: [
-                     {
-                         name: `Frontend Development`,
-                         points: [
-                             `Develop interactive and responsive dashboards to display key business metrics.`,
-                             `Create components like gauges, histograms, and time series charts.`
-                         ]
-                     }
-                ]
-             }
-         ]
-    }
-];
-
-const education_experience_data= [
-    {
-        duration: `<time datetime="2018-2022">2018-2022</time>`,
-        name: `B. TECH (COMPUTER SCIENCE ENGINEERING)`,
-        institution: `Institute Of Technical Education and Research`,
-        location: `BBSR, ODISHA`,
-        score: `8.36 CGPA`
-    },
-    // {
-    //     duration: `<time datetime="2016-2018">2016-2018</time>`,
-    //     name: `12TH STANDARD`,
-    //     institution: `DAV PUBLIC SCHOOL, UNIT 8`,
-    //     location: `BBSR, ODISHA`,
-    //     score: `57.00%`
-    // },
-    // {
-    //     duration: `<time datetime="2016">2016</time>`,
-    //     name: `10TH STANDARD`,
-    //     institution: `DAV PUBLIC SCHOOL, UNIT 8`,
-    //     location: `BBSR, ODISHA`,
-    //     score: `7.4 CGPA`
-    // }
-];
+const yearsOfExperience = calculateYearsOfExperience(start_date_data);
 
 const data = {
-    contact_name: contact_name_data,
-    contact_details: contact_details_data,
-    about: about_data,
-    skills: skills_data,
-    work_experience: work_experience_data,
-    education_experience: education_experience_data
-}
+    contact_name: "AMIT CHINARA",
+    contact_details: {
+        email: "amitchinara@gmail.com",
+        resume: "https://amitchinara.github.io/resume/",
+        linkedin: "https://www.linkedin.com/in/amit-chinara-0403b5312/",
+        leetcode: "https://leetcode.com/u/amitchinara/",
+        number: "+91 8093386767"
+    },
+    about: `Highly skilled and self-motivated Software Engineer with <b>${yearsOfExperience}</b> years of experience in designing, developing, and optimizing scalable applications. Passionate about solving complex problems with clean, efficient, and maintainable code. Adept at working in agile environments, collaborating with cross-functional teams, and delivering high-quality software at great velocity.`,
+    skills: ["Java", "Spring Boot", "Oracle DB", "MongoDB", "HTML", "CSS", "JavaScript", "TypeScript", "React JS", "Maven", "JUnit", "Node JS", "Jest", "Python", "Linux Script", "Git", "Docker"],
+    work_experience: [
+        {
+            company_name: "Accenture in India",
+            designation: "Application Development Analyst",
+            duration: "2022-Sept to Present",
+            location: "Bengaluru, Karnataka, India",
+            role: [
+                {
+                    name: "Software Engineer - Fullstack",
+                    points: [
+                        { name: "REST API Middleware Development", points: ["Designed and implemented REST API middleware using Java and Spring Boot.", "Optimized API performance with SQL tuning.", "Followed best coding practices with SonarQube and JUnit.", "Delivered high-quality, bug-free code."] },
+                        { name: "Service Observability & Debugging", points: ["Built a custom log aggregation tool using Bash scripting.", "Enhanced service observability for debugging latency issues."] },
+                        { name: "Frontend Development", points: ["Developed dynamic web components using React.js.", "Created a CTA form for customer engagement."] },
+                        { name: "Migration from MuleSoft to Node.js", points: ["Led API migration to Node.js with TypeScript.", "Implemented Jest for comprehensive testing."] },
+                        { name: "Performance Optimization", points: ["Optimized API execution times through SQL query improvements."] },
+                        { name: "Team Collaboration & Mentorship", points: ["Actively contributed to architectural decisions.", "Mentored team members on debugging techniques."] },
+                        { name: "Key Achievements", points: ["Successfully delivered high-impact backend solutions.", "Demonstrated expertise in API design and performance monitoring."] }
+                    ]
+                }
+            ]
+        },
+        {
+            company_name: "Highradius",
+            designation: "Intern",
+            duration: "2021-Dec to 2022-Aug",
+            location: "Remote",
+            role: [
+                {
+                    name: "Software Engineer - Frontend",
+                    points: [
+                        { name: "Frontend Development", points: ["Developed interactive dashboards for business metrics.", "Created gauges, histograms, and time-series charts."] }
+                    ]
+                }
+            ]
+        }
+    ],
+    education_experience: [
+        { duration: "2018-2022", name: "B. TECH (COMPUTER SCIENCE ENGINEERING)", institution: "Institute Of Technical Education and Research", location: "BBSR, ODISHA", score: "8.36 CGPA" }
+    ]
+};
+

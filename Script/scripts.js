@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    let transformed_data;
+    let transformedData;
 
     // Contact details elements
     const nameElement = document.getElementById("contact-name");
@@ -12,72 +12,94 @@ document.addEventListener("DOMContentLoaded", () => {
     const aboutElement = document.getElementById("about-text");
     const skillsElement = document.getElementById("skills-list");
     const workHistoryElement = document.getElementById("work-history");
-    const educationElement = document.getElementById("education-list"); // Corrected reference
+    const educationElement = document.getElementById("education-list");
 
-    if (!nameElement || !emailElement || !phoneElement || !linkedinElement || !leetcodeElement) {
-        console.error("One or more elements not found in the DOM");
+    // Ensure data is loaded
+    if (typeof data === "undefined") {
+        console.error("Data object not found!");
         return;
     }
 
     // Populate contact details
-    nameElement.innerHTML = data.contact_name;
-    emailElement.setAttribute("href", `mailto:${data.contact_details.email}`);
-    emailElement.innerHTML = data.contact_details.email;
-    phoneElement.setAttribute("href", `tel:${data.contact_details.number}`);
-    phoneElement.innerHTML = data.contact_details.number;
-    linkedinElement.setAttribute("href", data.contact_details.linkedin);
-    linkedinElement.innerHTML = "LinkedIn";
-    leetcodeElement.setAttribute("href", data.contact_details.leetcode);
-    leetcodeElement.innerHTML = "LeetCode";
+    if (data.contact_name) {
+        nameElement.innerHTML = data.contact_name;
+        nameElement.setAttribute("href", "https://amitchinara.github.io/resume/");
+        nameElement.setAttribute("target", "_blank");
+    }
+
+    if (data.contact_details) {
+        emailElement.setAttribute("href", `mailto:${data.contact_details.email}`);
+        emailElement.innerHTML = data.contact_details.email;
+
+        phoneElement.setAttribute("href", `tel:${data.contact_details.number}`);
+        phoneElement.innerHTML = data.contact_details.number;
+
+        linkedinElement.setAttribute("href", data.contact_details.linkedin);
+        leetcodeElement.setAttribute("href", data.contact_details.leetcode);
+    }
 
     // Populate About section
-    aboutElement.innerHTML = data.about;
+    aboutElement.innerHTML = data.about || "No information available.";
 
     // Populate Skills section
-    transformed_data = "";
-    for (const skill of data.skills) {
-        transformed_data += `<li>${skill}</li>`;
+    transformedData = "";
+    if (data.skills && Array.isArray(data.skills)) {
+        data.skills.forEach(skill => {
+            transformedData += `<li>${skill}</li>`;
+        });
+    } else {
+        transformedData = "<li>No skills listed.</li>";
     }
-    skillsElement.innerHTML = transformed_data;
+    skillsElement.innerHTML = transformedData;
 
     // Populate Work Experience section
-    transformed_data = "";
-    for (const work of data.work_experience) {
-        let comp_info = `<div class="work">
-                            <header>
-                                <h3 class="company">${work.company_name}</h3>
-                                <strong class="designation">${work.designation}</strong>
-                                <div class="duration">${work.duration}</div>
-                                <div class="location">${work.location}</div>
-                            </header>`;
-        for (const roleElement of work.role) {
-            let role_info = `<div class="project">
-                                <h4>${roleElement.name}</h4>
-                                <ul>`;
-            for (const roleElementpoint of roleElement.points) {
-                // role_info += `<h4>${roleElementpoint.name}</h4>`;
-                for (const point of roleElementpoint.points) {
-                    role_info += `<li>${point}</li>`;
-                }
-            }
-            role_info += `</ul>
-                        </div></div>`;
-            comp_info += role_info;
-        }
-        transformed_data += comp_info;
-    }
-    workHistoryElement.innerHTML = transformed_data;
+    transformedData = "";
+    if (data.work_experience && Array.isArray(data.work_experience)) {
+        data.work_experience.forEach(work => {
+            let compInfo = `
+                <div class="work">
+                    <header>
+                        <h3 class="company">${work.company_name}</h3>
+                        <strong class="designation">${work.designation}</strong>
+                        <div class="duration">${work.duration}</div>
+                        <div class="location">${work.location}</div>
+                    </header>`;
 
-    // Populate Education Table (Ensuring Tabular Format)
-    transformed_data = "";
-    for (const course of data.education_experience) {
-        transformed_data += `
-            <tr>
-                <td>${course.name}</td>
-                <td>${course.institution}, ${course.location}</td>
-                <td>${course.duration}</td>
-                <td>${course.score}</td>
-            </tr>`;
+            if (work.role && Array.isArray(work.role)) {
+                work.role.forEach(roleElement => {
+                    let roleInfo = `<div class="project">
+                        <h4>${roleElement.name}</h4>
+                        <ul>`;
+                    roleElement.points.forEach(roleElementPoint => {
+                        roleElementPoint.points.forEach(point => {
+                            roleInfo += `<li>${point}</li>`;
+                        });
+                    });
+                    roleInfo += `</ul></div>`;
+                    compInfo += roleInfo;
+                });
+            }
+            transformedData += compInfo + `</div>`;
+        });
+    } else {
+        transformedData = "<p>No work experience available.</p>";
     }
-    educationElement.innerHTML = transformed_data; // Ensure it targets the correct <tbody>
+    workHistoryElement.innerHTML = transformedData;
+
+    // Populate Education Table
+    transformedData = "";
+    if (data.education_experience && Array.isArray(data.education_experience)) {
+        data.education_experience.forEach(course => {
+            transformedData += `
+                <tr>
+                    <td>${course.name}</td>
+                    <td>${course.institution}, ${course.location}</td>
+                    <td>${course.duration}</td>
+                    <td>${course.score}</td>
+                </tr>`;
+        });
+    } else {
+        transformedData = "<tr><td colspan='4'>No education history available.</td></tr>";
+    }
+    educationElement.innerHTML = transformedData;
 });
