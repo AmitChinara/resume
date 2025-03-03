@@ -45,23 +45,23 @@ document.addEventListener("DOMContentLoaded", () => {
     for (const work of data.work_experience) {
         let comp_info = `<div class="work">
                             <header>
-                                <div class="company">${work.company_name}</div>
-                                <div class="designation"><b>${work.designation}</b></div>
+                                <h3 class="company">${work.company_name}</h3>
+                                <strong class="designation">${work.designation}</strong>
                                 <div class="duration">${work.duration}</div>
                                 <div class="location">${work.location}</div>
                             </header>`;
         for (const roleElement of work.role) {
             let role_info = `<div class="project">
-                                <h3>${roleElement.name}</h3>
+                                <h4>${roleElement.name}</h4>
                                 <ul>`;
             for (const roleElementpoint of roleElement.points) {
-                role_info += `<h4>${roleElementpoint.name}</h4>`;
+                // role_info += `<h4>${roleElementpoint.name}</h4>`;
                 for (const point of roleElementpoint.points) {
                     role_info += `<li>${point}</li>`;
                 }
             }
             role_info += `</ul>
-                        </div>`;
+                        </div></div>`;
             comp_info += role_info;
         }
         transformed_data += comp_info;

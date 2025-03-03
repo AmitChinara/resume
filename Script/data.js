@@ -11,9 +11,9 @@ const contact_details_data = {
     number: `+91 8093386767`,
 };
 
-const about_data = `I have <time datetime="${start_date_data}"><b>${yearsOfExperience}</b></time> years of work experience and my communication skills are robust enough to help me develop good relationship with other this also helps me to communicate my ideas to others. I am a team player which makes the work go smoothly. Along with this my creative problem-solving skills give me advantages during challenging situations. I believe that establishing defined objectives and meeting deadlines promotes a systematic and results-oriented approach to work. My ability to guide the team toward a certain goal demonstrates my leadership potential, making me an asset in any workplace.`;
+const about_data = `Highly skilled and self-motivated Software Engineer with <time datetime="${start_date_data}"><b>${yearsOfExperience}</b></time> years of experience in designing, developing, and optimizing scalable applications. Passionate about solving complex problems with clean, efficient, and maintainable code. Adept at working in agile environments, collaborating with cross-functional teams, and delivering high-quality software at great velocity.`;
 
-const skills_data = new Set([`Java8`, `Spring Boot`, `Oracle DB`, `MongoDB`, `HTML`, `CSS`, `JavaScript`, `TypeScript`, `React JS`, `Maven`, `JUnit`, `Node JS`, `Jest`, `Python`, `Linux Script`, `Git`, `Docker`]);
+const skills_data = new Set([`Java`, `Spring Boot`, `Oracle DB`, `MongoDB`, `HTML`, `CSS`, `JavaScript`, `TypeScript`, `React JS`, `Maven`, `JUnit`, `Node JS`, `Jest`, `Python`, `Linux Script`, `Git`, `Docker`]);
 
 const work_experience_data = [
     {
@@ -23,7 +23,7 @@ const work_experience_data = [
         location: `Bengaluru, Karnataka, India`,
         role: [
             {
-                name: `FullStack Developer`,
+                name: `Software Engineer - Fullstack`,
                 points: [
                     {
                         name: `REST API Middleware Development`,
@@ -88,7 +88,7 @@ const work_experience_data = [
         location: `Remote`,
          role: [
              {
-                 name: `Frontend Developer`,
+                 name: `Software Engineer - Frontend`,
                  points: [
                      {
                          name: `Frontend Development`,

@@ -11,7 +11,7 @@ body {
 header {
     background-color: #333;
     color: white;
-    padding: 20px;
+    padding: 1px;
     text-align: center;
 }
 
@@ -28,9 +28,9 @@ header a:hover {
 /* Sections */
 section {
     width: 80%;
-    margin: 20px auto;
+    margin: 10px auto;
     background: white;
-    padding: 20px;
+    padding: 10px;
     border-radius: 8px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -72,13 +72,8 @@ section {
     margin-bottom: 10px;
 }
 
-.project h3 {
-    color: #007bff;
-    margin-top: 10px;
-}
-
 .project h4 {
-    color: #333;
+    color: #007bff;
     margin-top: 5px;
     font-size: 1em;
     font-weight: bold;
@@ -130,3 +125,10 @@ footer {
     color: white;
     margin-top: 20px;
 }
+
+@media print {
+    .noprint {
+        display: none !important;
+    }
+}
+
