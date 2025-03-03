@@ -10,7 +10,7 @@ const data = {
         leetcode: "https://leetcode.com/u/amitchinara/",
         number: "+91 8093386767"
     },
-    about: `Highly skilled and self-motivated Software Engineer with <b>${yearsOfExperience}</b> years of experience in designing, developing, and optimizing scalable applications. Passionate about solving complex problems with clean, efficient, and maintainable code. Adept at working in agile environments, collaborating with cross-functional teams, and delivering high-quality software at great velocity.`,
+    about: `Highly skilled and self-motivated Software Engineer with <strong>${yearsOfExperience}</strong> years of experience in designing, developing, and optimizing scalable applications. Passionate about solving complex problems with clean, efficient, and maintainable code. Adept at working in agile environments, collaborating with cross-functional teams, and delivering high-quality software at great velocity.`,
     skills: ["Java", "Spring Boot", "Oracle DB", "MongoDB", "HTML", "CSS", "JavaScript", "TypeScript", "React JS", "Maven", "JUnit", "Node JS", "Jest", "Python", "Linux Script", "Git", "Docker"],
     work_experience: [
         {
