@@ -1,4 +1,4 @@
-const start_date_data = "2021-12";
+const start_date_data = "2021-11";
 let yearsOfExperience = calculateYearsOfExperience(start_date_data);
 
 const contact_name_data = `AMIT CHINARA`;
