@@ -90,7 +90,7 @@ html, body {
     width: 65%;
 }
 
-section h2 {
+section .work-history h2, section .education h2 {
     text-decoration: underline;
     margin-bottom: 10px;
 }
