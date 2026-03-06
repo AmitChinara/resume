@@ -1,80 +1,142 @@
-let transformed_data;
-
-const hyperlinkElement = document.getElementsByTagName("a");
-const resumelinkElement = hyperlinkElement[0];
-const emaillinkElement = hyperlinkElement[1];
 const nameElement = document.getElementById("name");
+
 const emailElement = document.getElementById("email");
+
 const phoneElement = document.getElementById("phone");
+
 const linkedinElement = document.getElementById("linkedin-link");
+
 const leetcodeElement = document.getElementById("leetcode-link");
 
 const aboutElement = document.getElementById("about");
+
 const skillsElement = document.getElementById("skills");
+
 const workHistoryElement = document.getElementById("work-history");
+
+const projectsElement = document.getElementById("projects");
+
 const educationElement = document.getElementById("education");
 
-// ----------------- Contact Info -----------------
-resumelinkElement.setAttribute("href", data.contact_details.resume);
-nameElement.innerHTML = data.contact_name;
-emaillinkElement.setAttribute("href", `mailto:${data.contact_details.email}`);
-emailElement.innerHTML = data.contact_details.email;
-phoneElement.setAttribute("href", `tel:${data.contact_details.number}`);
-phoneElement.innerHTML = data.contact_details.number;
-linkedinElement.setAttribute("href", data.contact_details.linkedin);
-linkedinElement.innerHTML = data.contact_details.linkedin.replaceAll(`https://www.linkedin.com/in/`, ``);
-leetcodeElement.setAttribute("href", data.contact_details.leetcode);
-leetcodeElement.innerHTML = data.contact_details.leetcode.replaceAll(`https://leetcode.com/u/`, ``);
 
-// ----------------- About -----------------
-aboutElement.innerHTML = data.about;
 
-// ----------------- Skills -----------------
-transformed_data = `<ul>`;
-for (const skill of data.skills) {
-    transformed_data += `<li>${skill}</li>`;
-}
-transformed_data += `</ul>`;
-skillsElement.innerHTML = transformed_data;
+nameElement.textContent = data.contact_name;
 
-// ----------------- Work History -----------------
-transformed_data = "";
+
+
+emailElement.href = `mailto:${data.contact_details.email}`;
+emailElement.textContent = data.contact_details.email;
+
+
+
+phoneElement.href = `tel:${data.contact_details.number}`;
+phoneElement.textContent = data.contact_details.number;
+
+
+
+linkedinElement.href = data.contact_details.linkedin;
+linkedinElement.textContent =
+    data.contact_details.linkedin.replace("https://www.linkedin.com/in/", "");
+
+
+
+leetcodeElement.href = data.contact_details.leetcode;
+leetcodeElement.textContent =
+    data.contact_details.leetcode.replace("https://leetcode.com/u/", "");
+
+
+
+aboutElement.textContent = data.about;
+
+
+
+skillsElement.innerHTML =
+`<ul>
+${data.skills.map(skill => `<li>${skill}</li>`).join("")}
+</ul>`;
+
+
+
+let workHTML = "";
+
 for (const work of data.work_experience) {
-    transformed_data += `
-        <div class="work">
-            <header>
-                <div class="company"><b>${work.company_name}</b></div>
-                <div class="designation">${work.designation}</div>
-                <div class="duration">${work.duration}</div>
-                <div class="location">${work.location}</div>
-            </header>
+
+    workHTML += `
+    <div class="work">
+
+        <header>
+            ${work.company_name} - ${work.designation}
+        </header>
+
+        <div>${work.duration} | ${work.location}</div>
     `;
 
     for (const role of work.role) {
-        transformed_data += `<div class="role">
-                                <h3>${role.name}</h3>
-                                <ul>`;
+
+        workHTML += `<h4>${role.name}</h4><ul>`;
+
         for (const point of role.points) {
-            transformed_data += `<li>${point}</li>`;
+
+            workHTML += `<li>${point}</li>`;
+
         }
-        transformed_data += `</ul></div>`;
+
+        workHTML += `</ul>`;
     }
 
-    transformed_data += `</div>`; // close company div
+    workHTML += `</div>`;
 }
-workHistoryElement.innerHTML = transformed_data;
 
-// ----------------- Education -----------------
-transformed_data = "";
+workHistoryElement.innerHTML = workHTML;
+
+
+
+let projectHTML = "";
+
+for (const project of data.projects) {
+
+    projectHTML += `
+
+    <div class="project">
+
+        <header>${project.name}</header>
+
+        <div class="tech-stack">
+            Tech: ${project.tech}
+        </div>
+    `;
+
+    if (project.link) {
+
+        projectHTML += `<div><a href="${project.link}" target="_blank">${project.link}</a></div>`;
+    }
+
+    projectHTML += `<ul>`;
+
+    for (const point of project.points) {
+
+        projectHTML += `<li>${point}</li>`;
+    }
+
+    projectHTML += `</ul></div>`;
+}
+
+projectsElement.innerHTML = projectHTML;
+
+
+
+let eduHTML = "";
+
 for (const course of data.education_experience) {
-    transformed_data += `
-        <tr>
-            <td>${course.name}</td>
-            <td>${course.institution}, ${course.location}</td>
-            <td>${course.duration}</td>
-            <td>${course.score}</td>
-        </tr>
+
+    eduHTML += `
+    <tr>
+        <td>${course.name}</td>
+        <td>${course.institution}</td>
+        <td>${course.duration}</td>
+        <td>${course.score}</td>
+    </tr>
     `;
 }
-educationElement.innerHTML = transformed_data;
-transformed_data = undefined;
+
+educationElement.innerHTML = eduHTML;
