@@ -75,6 +75,13 @@ const work_experience_data = [
                 "Implemented backend services handling telecom product catalog and customer requests."
 
             ]
+        },
+        {
+            name: "Gen AI Developer",
+
+            points: [
+                "Implemented backend services handling telecom product catalog and customer requests."
+            ]
         }
     ]
 },
