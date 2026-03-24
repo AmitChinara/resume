@@ -1,100 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-
-    <meta charset="UTF-8">
-    <title>Amit Chinara Resume</title>
-
-    <meta name="viewport" content="width=1024, initial-scale=1.0">
-
-    <link rel="stylesheet" href="./CSS/style.css">
-
-</head>
-
-<body>
-
-<div class="container">
-
-    <section class="profile">
-
-        <h1 id="name"></h1>
-
-        <div class="contact">
-
-            <span>✉ <a id="email"></a></span>
-            <span>📱 <a id="phone"></a></span>
-            <span>LinkedIn: <a id="linkedin-link"></a></span>
-            <span>LeetCode: <a id="leetcode-link"></a></span>
-
+    <head>
+        <meta charset="UTF-8">
+        <title>Amit Chinara Resume</title>
+        <meta name="viewport" content="width=1024, initial-scale=1.0">
+        <link rel="stylesheet" href="./CSS/style.css">
+    </head>
+    <body>
+        <div class="container">
+            <section class="profile">
+                <h1 id="name"></h1>
+                <div class="contact">
+                    <span>✉ <a id="email"></a></span>
+                    <span>📱 <a id="phone"></a></span>
+                    <span> <a id="linkedin-link"></a></span>
+                    <span> <a id="leetcode-link"></a></span>
+                </div>
+            </section>
+            <section class="prof-summary">
+                <h2>Professional Summary</h2>
+                <div id="about"></div>
+            </section>
+            <section class="skills">
+                <h2>Skills</h2>
+                <div id="skills"></div>
+            </section>
+            <section class="work-history">
+                <h2>Work History</h2>
+                <div id="work-history"></div>
+            </section>
+            <section class="education">
+                <h2>Education</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Course</th>
+                            <th>Institution</th>
+                            <th>Date</th>
+                            <th>Marks</th>
+                        </tr>
+                    </thead>
+                    <tbody id="education"></tbody>
+                </table>
+            </section>
         </div>
-
-    </section>
-
-
-    <section class="prof-summary">
-
-        <h2>Professional Summary</h2>
-
-        <div id="about"></div>
-
-    </section>
-
-
-    <section class="skills">
-
-        <h2>Skills</h2>
-
-        <div id="skills"></div>
-
-    </section>
-
-
-    <section class="work-history">
-
-        <h2>Work History</h2>
-
-        <div id="work-history"></div>
-
-    </section>
-
-
-    <section class="projects">
-
-        <h2>Projects</h2>
-
-        <div id="projects"></div>
-
-    </section>
-
-
-    <section class="education">
-
-        <h2>Education</h2>
-
-        <table>
-
-            <thead>
-                <tr>
-                    <th>Course</th>
-                    <th>Institution</th>
-                    <th>Date</th>
-                    <th>Marks</th>
-                </tr>
-            </thead>
-
-            <tbody id="education"></tbody>
-
-        </table>
-
-    </section>
-
-</div>
-
-<script src="./Script/staticFunction.js"></script>
-<script src="./Script/data.js"></script>
-<script src="./Script/scripts.js"></script>
-
-</body>
-
+        <script src="./Script/staticFunction.js"></script>
+        <script src="./Script/data.js"></script>
+        <script src="./Script/scripts.js"></script>
+    </body>
 </html>
