@@ -51,7 +51,14 @@ const work_experience_data = [
             {
                 name: `Gen AI Developer`,
                 points: [
-                    `Demonstrated ownership and expertise in handling diverse tasks ranging from API design to performance monitoring and optimization.`
+                    `Developed an AI-powered chatbot integrated with <em><b>Cohere API</b></em> via secure endpoints to provide role recommendations based on user input.`,
+                    `Built an AWS Lambda-based architecture to process and respond to user queries in a scalable, event-driven manner.`,
+                    `Implemented a role retrieval service using a knowledge base to fetch and suggest relevant job roles based on user descriptions.`,                
+                    `Designed a data pipeline using <em><b>AWS SQS</b></em> to handle asynchronous processing of incoming data.`,                
+                    `Converted incoming data into vector embeddings and stored them in <em><b>OpenSearch</b></em> for efficient semantic search and retrieval.`,                
+                    `Developed a Lambda function to detect new roles, fetch relevant data, and push updates to SQS for downstream processing.`,                
+                    `Enabled semantic matching of user input with stored embeddings to improve accuracy of role recommendations.`,
+                    `Ensured secure API communication and optimized system performance through efficient event-driven workflows.`
                 ]
             }
         ]
