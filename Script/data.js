@@ -47,6 +47,12 @@ const work_experience_data = [
                     `Successfully delivered high-impact backend solutions, solving challenging problems with innovative and intuitive approaches.`,
                     `Demonstrated ownership and expertise in handling diverse tasks ranging from API design to performance monitoring and optimization.`
                 ]
+            },
+            {
+                name: `Gen AI Developer`,
+                points: [
+                    `Demonstrated ownership and expertise in handling diverse tasks ranging from API design to performance monitoring and optimization.`
+                ]
             }
         ]
     },
