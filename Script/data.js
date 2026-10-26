@@ -21,6 +21,22 @@ const skills_data = new Set([
 
 const work_experience_data = [
     {
+        company_name: `DXC Technology`,
+        designation: `Software Engineer`,
+        duration: `<time datetime="2026-05">2026-May</time> to <time datetime="Present">Present</time>`,
+        location: `India`,
+        role: [
+            {
+                name: `Python Developer`,
+                points: [
+                    `Developed Python-based functionality to generate PDF documents programmatically using <em><b>ReportLab</b></em>.`,
+                    `Implemented document generation logic to organize and format content into structured PDF output.`,
+                    `Worked on PDF layout and formatting to produce readable, consistently structured documents using <em><b>Python</b></em> and <em><b>ReportLab</b></em>.`
+                ]
+            }
+        ]
+    },
+    {
         company_name: `Accenture in India`,
         designation: `Application Development Analyst`,
         duration: `<time datetime="2022-Sept">2022-Sept</time> to <time datetime="Present">Present</time>`,
