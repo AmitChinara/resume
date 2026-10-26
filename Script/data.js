@@ -19,8 +19,22 @@ const skills_data = [
     `Linux Script`, `Git`, `Docker`, `Django`
 ];
 
-const work_experience_data = [
-  {
+const work_experience_data = [{
+  company_name: "DXC Technology",
+  designation: "Software Engineer",
+  duration: "May 2026 - Present",
+  location: "India",
+  role: [
+    {
+      name: "Python Developer",
+      points: [
+        "Developed Python-based solutions to generate PDF documents using the ReportLab library.",
+        "Implemented PDF generation logic to structure and format document content programmatically.",
+        "Worked on document layout, formatting, and PDF output generation using Python and ReportLab."
+      ]
+    }
+  ]
+},{
     company_name: "Accenture in India",
     designation: "Application Development Analyst",
     duration: "Sept 2022 - Present",
@@ -77,8 +91,7 @@ const work_experience_data = [
         ]
       }
     ]
-  }
-];
+  }];
 
 const education_experience_data = [
   {
