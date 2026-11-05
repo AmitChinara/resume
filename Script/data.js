@@ -37,7 +37,7 @@ const work_experience_data = [{
 },{
     company_name: "Accenture in India",
     designation: "Application Development Analyst",
-    duration: "Sept 2022 - Present",
+    duration: "Sept 2022 - May 2026",
     location: "Bengaluru",
     role: [
         {
